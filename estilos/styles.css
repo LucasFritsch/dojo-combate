@@ -1,0 +1,605 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+:root {
+    --vermelho01: #B10609;
+    --cinza01: #0A0A0A;
+    --cinza02: #444444;
+    --cinza03: #f0f0f0;
+    --cinza04: #dfdfdf;
+
+    --kanjis: 'Reggae One';
+    --Poppins: 'Poppins';
+    --Kanit: 'Kanit';
+    --Oswald: 'Oswald'
+}
+
+
+@media screen and (min-width: 768px) {
+    /* Configurações de reset */
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* !Configurações de posicionamento, tamanhos e paddings das caixas maiores e de divisórias: header, section, footer e hr (footer não recebe max-width pois seu fundo deve ter o tamanho da página inteira) */ 
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #000000;
+        color: aliceblue;
+    }
+
+    section {
+        margin: auto;
+        width: 75vw;
+        padding: 1vw 0;
+    }
+
+    section .header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 4%;
+        justify-content: center;
+ 
+        padding: 0;
+    }
+
+    section .header h2 {
+        background-image: linear-gradient(to bottom, red, rgb(138, 0, 0));
+        background-clip: text;
+        color: transparent;
+        font-family: var(--Oswald);
+        font-size: 3vw;
+    }
+
+    section .header h3 {
+        font-family: var(--Poppins);
+        font-size: 1.5vw;
+        font-weight: 200;
+
+    }
+
+    .divisora-sections {
+        border: solid 1px #b60000;
+        max-width: 75vw;
+        margin: 2vw auto;
+    }
+
+    /* !Configuirações dos demais elementos */
+    /* relativas à header */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        
+        max-width: 75vw;
+
+        margin: auto;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        padding: 2vw 0;
+    }
+
+    header .logo {
+        max-width: 5vw;
+    }
+
+    header .menu {
+        height: 5vw;
+        width: 53%;
+        position: static;
+    }
+
+    header .menu .ícone_hambúrguer {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    header .menu .ícone_linha {
+        display: none;
+    }
+        
+    header .menu_itens {
+        position: relative;
+        left: 0;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+ 
+        height: 100%;
+        width: 100%;
+    }
+
+    header .menu_itens a{
+        font-size: 2vw;
+    }
+
+    header .nav_item {
+        position: relative;
+        font-family: "Oswald";
+    }
+
+    header .nav_item::after {
+        position: absolute;
+        content: "";
+        bottom: -2%;
+        left: 0;
+        z-index: -1;
+
+        background-color: #990000;
+        border-radius: 2px;
+
+        height: 4%;
+        width: 0;
+
+        transition: 0.3s ease-in-out;
+    }
+
+    header .nav_item:hover::after {
+        width: 100%;
+
+        transition: 0.3s ease-in-out;
+    }
+
+    header .ícone_hambúrguer {
+        display: none;
+    }
+    
+    header .menu_gatilho {
+        display: none;
+    }
+
+    /* Relativas ao hero */
+    .hero {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        justify-content: space-between;
+    }
+
+    .hero .textos {
+        text-align: center;
+        background-image: none;
+        border: none;
+        width: fit-content;
+        padding: 0;
+    }
+
+    .hero .nome-academia {
+        display: flex;
+        gap: 0.6vw;
+
+        font-family: var(--Kanit);
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+
+    .hero .nome-academia-monoespaçado {
+        font-family: var(--Poppins);
+        font-weight: 300;
+    }
+
+    /* Comentário: Como o gap no h1 ".nome-academia" interferia na centralização dos textos, o h2 abaixo recebeu um margin-left para compensar */
+    .hero .textos h2 {
+        font-family: var(--Oswald);
+        font-size: 2.1vw;
+
+        margin-left: -0.6vw;
+        margin-top: -1vw;
+    }
+
+    .hero .kanji {
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .kanji span 
+    {
+        color: #970000;
+        font-family: 'Reggae One';
+        font-size: 6vw;
+    }
+
+    .hero img {
+        width: 35%;
+    }
+
+    /* Linha divisória entre o hero e a section "sobre" */
+    .hr_sub-hero {
+        display: block;
+        border: solid 1px rgb(182, 0, 0);
+        max-width: 75vw;
+        margin: auto;
+        margin-bottom: 2vw;
+    }
+
+    /* Relativas à section "sobre" */
+    #sobre {
+        position: relative;
+    }
+
+    #sobre .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        max-width: inherit;
+
+        margin: auto;
+    }
+
+    #sobre .container_item {
+        background-color: #0a0a0a52;
+        backdrop-filter: blur(10px);
+
+        border: solid 1px #c7c7c7;
+        border-radius: 10px;
+
+        max-width: 30%;
+        padding: 1% 2%;
+
+        align-items: start;
+        gap: 0;
+    }
+
+    .item_ícone {
+        width: 20%;
+        padding-bottom: 2%;
+    }
+
+    #sobre .container_item h2 {
+        font-family: var(--Poppins);
+        font-size: 1.2vw;
+    }
+
+    #sobre .container_item p {
+        font-family: var(--Poppins);
+        font-size: 1.2vw;
+        font-weight: 300;
+        text-align: justify;
+        line-height: normal;
+    }
+
+    /* Relativas à section "história" */
+    #história .header {
+        text-align: center;
+        padding-bottom: 2vw;
+    }
+
+    #história .header h3 {
+        font-family: var(--Oswald);
+        font-size: 1.8vw;
+        font-weight: 600;
+        padding-bottom: 2vw;
+    }
+
+    #história .conteúdo {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #história .conteúdo_textos {
+        position: relative;
+        width: 45%;
+    }
+
+    #história .conteúdo_textos::before {
+        position: absolute;
+        left: -4%;
+        content: "";
+
+        background-color: #970000;
+        border-radius: 2px;
+
+        width: 1%;
+        height: 84%;
+    }
+
+    #história .conteúdo_textos h4 {
+        font-size: 1.3vw;
+        font-weight: 600;
+    }
+
+    #história .conteúdo_textos p {
+        font-family: var(--Poppins);
+        font-size: 1vw;
+
+        text-align: justify;
+
+        padding-bottom: 2%;
+    }
+
+    #história .conteúdo_imagens {
+        display: block;
+        width: 50%;
+        position: relative;
+    }
+
+    #história .conteúdo_imagens::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -5%;
+        right: -5%;
+
+        background-color: #99000098;
+        backdrop-filter: blur(10%);
+        border-radius: 10px;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    #história .conteúdo_imagens img{
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .botão_contato-desktops {
+        background-image: linear-gradient(to right, rgb(167, 0, 0), red);
+        border-radius: 20px;
+        display: block;
+
+        font-family: var(--Kanit);
+        font-size: 1vw;
+
+        margin: 2% auto;
+        padding: 2% 4%;
+        width: fit-content;
+        
+        transition: 0.2s;
+        position: static;
+    }
+
+    #história .botão_contato-desktops:hover {
+        box-shadow: 0px 0px 1px 1px white;
+        transition: 0.2s;
+    }
+
+    .botão_contato-mobile {
+        display: none;
+    }
+
+    /* Relativas à section "modalidades" */
+    #modalidades .container-mobile {
+        display: none;
+    }
+
+    #modalidades .container-dt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 17vw;
+
+        position: relative;
+    }
+
+    #modalidades .container-dt_item {
+        background-color: #0a0a0ae3;
+        backdrop-filter: blur(10%);
+        border-radius: 10px;
+        width: 24%;
+        height: 100%;
+
+        transition: 0.3s;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .imagem_item-dt {
+        width: 100%;
+    }
+
+    #modalidades .container-dt h3 {
+        font-size: 1.7vw;
+        padding-bottom: 8%;
+        text-align: center;
+    }
+
+    #modalidades .container-dt p {
+        text-align: justify;
+        font-size: 1.1vw;
+    }
+
+    #modalidades .container-dt .conteúdo-dt {
+        position: absolute;
+        top: 78%;
+
+        padding: 0 6%;
+
+        transition: 0.3s;
+    }
+
+    #modalidades .container-dt_item:hover .conteúdo-dt {
+        top: 0;
+
+        background-color: #0a0a0abb;
+        backdrop-filter: blur(10px);
+
+        padding-top: 2%;
+
+        transition: 0.5s;
+    }
+
+    /* Relativas à section "inscrição" */
+    #inscrição .conteúdo {
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        justify-content: space-between;
+
+        margin-bottom: 2vw;
+        width: 100%;
+    }
+
+    #inscrição table {
+        border-collapse: collapse;
+        border-radius: 15px;
+        outline: 5px solid black;
+    }
+
+    #inscrição table thead{
+        background-image: linear-gradient(to right, #da0000, #5f0000);
+        border-radius: 10px;
+    }
+
+    #inscrição table tbody {
+        background-color: #570000;
+    }
+
+    table th, table td {
+        border: solid, 2px, #220000;
+        padding: 0.8rem;
+
+        font-family: var(--Poppins);
+        font-size: 1.3vw;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-image: linear-gradient(#bd0606, #960000);
+        border-radius: 20px;
+
+        padding: 1vw;
+        width: 30%;
+    }
+
+    form label, form input {
+        display: block;
+        font-family: var(--Poppins);
+    }
+
+    /* Configurações relativas ao footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #1b1b1b;
+        padding: 1vw 0px;
+    }
+
+    footer a, footer span {
+        font-family: var(--Kanit);
+    }
+
+    footer h3 {
+        text-align: center;
+        font-family: var(--Poppins);
+        margin: auto;
+        margin-bottom: 1vw;
+        font-weight: 400;
+    }
+
+    footer .linha {
+        align-items: center;
+        display: flex;
+        width: 75vw;
+        justify-content: space-between;
+        margin: auto;
+        font-family: var(--Kanit);
+    }
+
+    footer .link-topo {
+        align-items: center;
+        display: flex;
+        gap: 1vw;
+    }
+
+    footer .link-topo i {
+        font-size: 1.5vw;
+    }
+
+    footer nav {
+        display: flex;
+        gap: 2vw;
+    }
+
+    .footer_logo {
+        width: 15vw;
+    }
+
+    .footer-redes {
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+
+        font-size: 1.5vw;
+    }
+
+    .footer-redes .icone-instagram {
+        background-image: linear-gradient(0.4turn, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D, #F56040, #FCAF45);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .footer-redes .icone-instagram:hover {
+        background-image: linear-gradient(to bottom, red, red);
+        background-clip: text;
+    }
+
+    .footer-redes .icone-whatsapp {
+        background-image: linear-gradient(to bottom, #5AD065, #25B43C);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .footer-redes .icone-whatsapp:hover {
+        background-image: linear-gradient(to bottom, red, red);
+        background-clip: text;
+    }
+
+    .footer-redes .icone-gympass {
+        background-image: linear-gradient(to right, #F2486D, #c42044);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .footer-redes .icone-gympass:hover {
+        background-image: linear-gradient(to bottom, red, red);
+        background-clip: text;
+    }
+
+    .footer-redes i {
+        font-size: 2vw;
+    }
+
+    footer hr {
+        border: solid 1px rgb(134, 134, 134);
+        margin: 1.5vw auto;
+        width: 75vw;
+    }
+}
+    
+
+

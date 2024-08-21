@@ -1,0 +1,711 @@
+@charset "utf-8";       
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+:root {
+    --vermelho01: #B10609;
+    --cinza01: #0A0A0A;
+    --cinza02: #444444;
+    --cinza03: #f0f0f0;
+    --cinza04: #dfdfdf;
+
+    --kanjis: 'Reggae One';
+    --Poppins: 'Poppins';
+    --Kanit: 'Kanit';
+    --Oswald: 'Oswald'
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* !Configurações de posicionamento, tamanhos e paddings das caixas maiores e de divisórias: header, section, footer e hr (footer não recebe max-width pois seu fundo deve ter o tamanho da página inteira) */ 
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #000000;
+}
+
+section {
+    margin: 0;
+    padding: 20px 0px;
+    color: white;
+}
+
+section .header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vw;
+
+    margin: auto;
+    padding-bottom: 6vw;
+
+}
+
+section .header h2 {
+    background-image: linear-gradient(to bottom, red, rgb(138, 0, 0));
+    background-clip: text;
+    color: transparent;
+    font-family: var(--Oswald);
+    font-size: 8vw;
+    line-height: 8vw;
+    text-align: center;
+}
+
+section .header h3 {
+    font-family: var(--Poppins);
+    font-size: 5vw;
+    line-height: 5vw;
+    font-weight: 200;
+    color: white;
+}
+
+.divisora-sections {
+    border: solid 1px #b60000;
+    max-width: 75vw;
+    margin: auto;
+}
+
+/* Configurações relativas à header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3%;
+
+    position: relative;
+}
+
+header .logo {
+    max-width: 15vw;
+}
+
+header .menu {
+    position: fixed;
+    right: 5%;
+    z-index: 999;
+}
+
+header .ícone_hambúrguer {
+    width: 10vw;
+    height: 10vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+header .menu_gatilho {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.2s ease;
+}
+
+header .ícone_linha {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 15%;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+header .menu_gatilho:checked ~ .ícone_linha {
+    transition: all 0.2s ease;
+}
+
+header .menu_gatilho:checked ~ .linha_01 {
+    transform: rotate(45deg) scaleX(1.40); 
+    transform-origin: 8% 50%;
+    transition: all 0.2s ease;
+}
+
+header .menu_gatilho:checked ~ .linha_02 { 
+    opacity: 0;
+}
+
+header .menu_gatilho:checked ~ .linha_03 { 
+    transform: rotate(-45deg) scaleX(1.40);
+    transform-origin: 8% 50%;
+}
+
+header .menu_itens {
+    position: fixed;
+    left: 100%;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+
+    border-left: solid 3px rgba(122, 0, 0, 0);
+    color: #f0f0f017;
+
+    transition: 0.5s ease;
+    height: 100vh;
+    width: 50%;
+
+    list-style-position: inside;
+    list-style-type: none;
+}
+
+header .menu_itens a {
+    font-family: var(--Oswald);
+    font-size: 8vw;
+}
+
+header .menu_gatilho:checked ~ .menu_itens {
+    background-color: #b10609e8;
+    left: 50%;
+    top: 0%;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 50%;
+
+    transition: 0.5s ease;
+
+    border-left: solid 3px #7a0000;
+}
+
+/* Configurações relativas a hero */
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    max-width: 100vw;
+    margin: auto;
+}
+
+.hero img {
+    max-width: 70vw;
+}
+
+.hero .textos {
+    color: white;
+    background-image: linear-gradient(135deg, #d60000, #530000);
+    border-top: solid 1px rgb(36, 0, 0);
+    border-bottom: solid 1px rgb(71, 0, 0);
+    text-align: center;
+
+    position: relative;
+    width: 100vw;
+    padding: 4vw 0;
+}
+
+.hero .nome-academia {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+
+    font-family: var(--Kanit);
+    font-size: 12vw;
+
+    line-height: 12vw;
+}
+
+.hero .nome-academia-monoespaçado {
+    font-family: var(--Poppins);
+    font-weight: 300;
+}
+
+.hero .textos h2 {
+    font-family: var(--Oswald);
+    font-size: 6.5vw;
+
+    margin-left: -0.6vw;
+    margin-top: -1vw;
+}
+
+.hero .kanji {
+    position: absolute;
+    z-index: -1;
+
+    font-size: 2vw;
+}
+
+.hero .kanji span {
+    color: #970000;
+    font-family: 'Reggae One';
+    font-size: 6vw;
+}
+
+.hr_sub-hero {
+    display: none;
+}
+
+/* Configurações relativas à section "sobre" */
+#sobre .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10vw;
+
+    max-width: inherit;
+
+    margin: auto;
+}
+
+#sobre .container_item {
+    background-color: #0a0a0a52;
+    backdrop-filter: blur(10px);
+    color: white;
+
+    border: solid 2px #c7c7c7;
+    border-radius: 10px;
+
+    width: 70%;
+    padding: 2% 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.item_ícone {
+    width: 25%;
+    padding-bottom: 1%;
+}
+
+#sobre .container_item h2 {
+    font-family: var(--Poppins);
+    font-size: 4vw;
+    text-align: center;
+}
+
+#sobre .container_item p {
+    font-family: var(--Poppins);
+    font-size: 3.5vw;
+    font-weight: 300;
+    text-align: center;
+    line-height: 4.2vw;
+}
+
+/* Configurações relativas à section "história" */
+
+#história .header {
+    font-family: var(--Oswald);
+    font-size: 8vw;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 4vw;
+    padding-top: 6vw;
+}
+
+#história .conteúdo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#história .conteúdo_textos {
+    width: 80%;
+}
+
+#história .conteúdo_textos h4 {
+    font-size: 6vw;
+    font-weight: 600;
+    margin-top: 4vw;
+    padding-bottom: 2vw;
+
+    border-left: solid 3px rgb(172, 0, 0);
+    padding-left: 12px;
+    margin-left: -12px;
+    border-top-left-radius: 8px;
+}
+
+#história .conteúdo_textos p {
+    font-family: var(--Poppins);
+    font-size: 4vw;
+
+    text-align: justify;
+
+    padding-bottom: 4vw;
+
+    border-left: solid 3px rgb(172, 0, 0);
+    padding-left: 12px;
+    margin-left: -12px;
+    border-bottom-left-radius: 8px;
+}
+
+#história .conteúdo_imagens {
+    display: block;
+    width: 90%;
+    position: relative;
+    margin-top: 8vw;
+}
+
+#história .conteúdo_imagens::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -5%;
+    right: -2%;
+
+    background-color: #b600009a;
+    backdrop-filter: blur(10%);
+    border-radius: 5px;
+
+    width: 100%;
+    height: 100%;
+}
+
+#história .conteúdo_imagens img{
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.botão_contato-desktops {
+    display: none;
+}
+
+.botão_contato-mobile {
+    background-image: linear-gradient(to right, rgb(167, 0, 0), red);
+        border-radius: 5px;
+        display: block;
+
+        font-family: var(--Kanit);
+        font-size: 5vw;
+
+        margin: 2% auto;
+        padding: 2% 4%;
+        width: fit-content;
+        
+        transition: 0.2s;
+}
+
+/* Configurações relativas à section modalidades (o conteúdo para desktops recebe "display: none", e uma div que se comporta como um slider toma lugar */
+
+#modalidades .container-dt {
+    display: none;
+}
+
+/* test */
+#modalidades .container-mobile {
+    max-width: 90%;
+
+    display: flex;
+    row-gap: 4vw;
+    flex-direction: column;
+    margin: auto;
+
+    overflow: hidden;
+    position: relative;
+}
+
+#modalidades .item_container-mobile {
+    background-size: cover;
+    background-position: center 30%;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
+    height: fit-content;
+    position: relative;
+    transition: 0.5s;
+}
+
+#modalidades .item_jiujitsu {
+    background-image: url("../mídia/imagens/jiujitsu.png");
+}
+
+#modalidades .item_jiujitsukids {
+    background-image: url("../mídia/imagens/jiujitsu_infantil.png");
+    background-position: center 25%;
+}
+
+#modalidades .item_muaythai {
+    background-image: url("../mídia/imagens/muaythai.png");
+    background-position: center 30%;
+}
+
+.item_container-mobile .conteúdo {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    justify-content: space-evenly;
+    height: 14vw;
+    transition: 0.3s ease-in-out;
+    padding: 3.5vw 4vw;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.item_container-mobile h3 {
+    font-size: 5vw;
+}
+
+.item_container-mobile p {
+    font-size: 3.5vw;
+}
+
+#modalidades .modalidades_gatilho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+#modalidades .modalidades_gatilho:checked ~ .conteúdo {
+    height: 50vw;
+    transition: 0.5s ease-in-out;
+    background-color: #0000008c;
+    backdrop-filter: blur(5px);
+}
+
+/* Relativas à section "inscrição" */
+#inscrição .aulas {
+    border-left: solid 2px rgb(216, 0, 0);
+    border-right: solid 2px #d80000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 4vw;
+    padding-bottom: 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    max-width: 95%;
+}
+
+.aulas h3 {
+    text-align: start;
+    padding-left: 5%;
+    font-family: var(--Poppins);
+    font-size: 5vw;
+}
+
+.aulas .container_item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    gap: 4vw 12%;
+}
+
+.aulas h4 {
+    color: #ff1c1c;
+    font-family: var(--Poppins);
+    font-weight: 500;
+    font-size: 4vw;
+}
+
+.aulas ul {
+    list-style-type: none;
+}
+
+.aulas li {
+    font-family: var(--Poppins);
+    font-size: 3vw;
+}
+
+#inscrição .conteúdo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+
+    margin-bottom: 2vw;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1vw;
+
+    background-image: linear-gradient(to bottom, black, #d80000);
+
+    border-right: solid 2px #d80000;
+    border-left: solid 2px #d80000;
+    border-bottom: solid 2px #d80000;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    padding-bottom: 4vw;
+    width: 95%;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+}
+
+form label {
+    font-family: var(--Poppins);
+    font-size: 4vw;
+}
+
+form input {
+    border: solid 1px rgb(100, 1, 1);
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+form button {
+    margin-top: 4vw;
+    background-color: #360000;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: 1vw 4vw;
+    font-size: 6vw;
+    font-family: var(--Oswald);
+    transition: 0.2s;
+}
+
+form button:hover {
+    background-color: #ffffff;
+    color: #b60000;
+    transition: 0.2s;
+}
+
+/* Configurações relativas ao footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 1vw 0px;
+}
+
+footer a, footer span {
+    font-family: var(--Kanit);
+}
+
+footer h3 {
+    color: white;
+    text-align: center;
+    font-family: var(--Poppins);
+    margin: auto;
+    margin-bottom: 1vw;
+    font-weight: 400;
+}
+
+footer .linha {
+    align-items: center;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin: auto;
+    font-family: var(--Kanit);
+}
+
+footer .link-topo {
+    align-items: center;
+    display: flex;
+    gap: 1vw;
+}
+
+footer .link-topo i {
+    font-size: 5vw;
+}
+
+footer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.footer_logo {
+    width: 40vw;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8vw;
+
+    font-size: 1.5vw;
+}
+
+.footer-redes span {
+    color: white;
+    font-size: 3vw;
+}
+
+.container_footer-redes {
+    display: flex;
+    column-gap: 2.2vw;
+}
+
+.footer-redes .icone-instagram {
+    background-image: linear-gradient(0.4turn, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D, #F56040, #FCAF45);
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-redes .icone-instagram:hover {
+    background-image: linear-gradient(to bottom, red, red);
+    background-clip: text;
+}
+
+.footer-redes .icone-whatsapp {
+    background-image: linear-gradient(to bottom, #5AD065, #25B43C);
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-redes .icone-whatsapp:hover {
+    background-image: linear-gradient(to bottom, red, red);
+    background-clip: text;
+}
+
+.footer-redes .icone-gympass {
+    background-image: linear-gradient(to right, #F2486D, #c42044);
+    background-clip: text;
+    color: transparent;
+}
+
+.footer-redes .icone-gympass:hover {
+    background-image: linear-gradient(to bottom, red, red);
+    background-clip: text;
+}
+
+.footer-redes i {
+    font-size: 8vw;
+}
+
+footer hr {
+    border: solid 1px rgb(134, 134, 134);
+    margin: 1.5vw auto;
+    width: 95%;
+}
