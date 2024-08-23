@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojo Combat</title>
-    <meta name="description" content="Lorem">
+    <meta name="description" content="Faça uma aula experimental de Jiu-jitsu, Muay thai ou Personal Fight na DC!">
     <link rel="stylesheet" href="estilos/disp-móveis.css">
     <link rel="stylesheet" href="estilos/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -227,11 +227,38 @@
                     </div>
                     <div>
                         <label for="modalidade">Modalidade</label>
-                        <input id="modalidade" type="text" required placeholder="Ex. Jiu Jitsu">
+                        <select name="modalidade" id="modalidade">
+                            <option value="">-Selecione-</option>
+                            <option value="jiu-jitsu">Jiu Jitsu</option>
+                            <option value="jiu-jitsu-kids">Jiu Jitsu Kids</option>
+                            <option value="muay-Thai">Muay Thai</option>
+                            <option value="personal-fight">Personal Fight</option>
+                        </select>
                     </div>
-                    <div>
-                        <label for="Dias">Dias de prática</label>
-                        <input id="dias_aluno" type="text" required placeholder="Ex. Segunda, quarta e sexta.">
+                    <div class="dias-pratica">
+                        <label for="dias-pratica">Dias de prática <strong>(Selecione até três)</strong></label><br>
+                        <div class="container-dias">
+                            <div>
+                                <input type="checkbox" name="dia" id="segunda" value="Segunda">
+                                <label for="segunda">Segunda</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="dia" id="terca" value="Terça">
+                                <label for="terca">Terça</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="dia" id="quarta" value="Quarta">
+                                <label for="quarta">Quarta</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="dia" id="quinta" value="Quinta">
+                                <label for="quinta">Quinta</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="dia" id="sexta" value="Sexta">
+                                <label for="sexta">Sexta</label>
+                            </div>
+                        </div>
                     </div>
                     <button onclick="mandarParaWhatsapp()">Enviar</button>
                 </form>
@@ -261,7 +288,7 @@
         </div>
         <hr>
         <div class="linha">
-            <h3>Desenvolvido por Lucas Fritsch</h3>
+            <h3>Desenvolvido por Lucas Fritsch⭐</h3>
         </div>
 
     <script src="whatsapp.js"></script>
