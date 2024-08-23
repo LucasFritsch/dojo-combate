@@ -180,7 +180,8 @@ header .menu_itens a {
 }
 
 header .menu_gatilho:checked ~ .menu_itens {
-    background-color: #b10609e8;
+    background-color: #b30003c2;
+    backdrop-filter: blur(10px);
     left: 50%;
     top: 0%;
     position: fixed;
@@ -434,6 +435,7 @@ header .menu_gatilho:checked ~ .menu_itens {
     transition: 0.5s;
 }
 
+
 #modalidades .item_jiujitsu {
     background-image: url("../mídia/imagens/jiujitsu.png");
 }
@@ -451,12 +453,12 @@ header .menu_gatilho:checked ~ .menu_itens {
 .item_container-mobile .conteúdo {
     display: flex;
     flex-direction: column;
-    gap: 3vw;
+    gap: 8vw;
     justify-content: space-evenly;
     height: 14vw;
     transition: 0.3s ease-in-out;
     padding: 3.5vw 4vw;
-    border-radius: 20px;
+    border-radius: 5px;
 
     overflow: hidden;
 }
@@ -498,6 +500,8 @@ header .menu_gatilho:checked ~ .menu_itens {
     flex-direction: column;
     gap: 4vw;
     max-width: 95%;
+
+    background-image: linear-gradient(to bottom, black, #810000);
 }
 
 .aulas h3 {
@@ -549,7 +553,7 @@ form {
     justify-content: space-between;
     row-gap: 1vw;
 
-    background-image: linear-gradient(to bottom, black, #d80000);
+    background-image: linear-gradient(to bottom, #810000, #e00000);
 
     border-right: solid 2px #d80000;
     border-left: solid 2px #d80000;
@@ -557,15 +561,64 @@ form {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 
+    padding-top: 2vw;
     padding-bottom: 4vw;
     width: 95%;
 }
 
-form div {
+form > div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 95%;
+}
+
+form .dias-pratica {
+    display: block;
+    padding-top: 2vw;
+}
+
+.dias-pratica .container-dias {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 4vw;
+}
+
+.container-dias label {
+    font-size: 3.5vw;
+}
+
+.container-dias input{
+    all: unset;
+
+    width: 8vw;
+    height: 8vw;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px rgb(117, 0, 0);
+    position: relative;
+}
+
+.container-dias input:checked {
+    color: white;
+    content: "X";
+    background-color: rgb(36, 0, 0);
+}
+
+.container-dias input:checked::after {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "✓";
+    font-size: 6vw;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 form label {
@@ -573,11 +626,16 @@ form label {
     font-size: 4vw;
 }
 
-form input {
+form input, select {
     border: solid 1px rgb(100, 1, 1);
     border-radius: 5px;
     width: 50%;
     text-align: center;
+    font-size: 3vw;
+}
+
+form select {
+    font-size: 4vw;
 }
 
 form button {
@@ -641,7 +699,7 @@ footer .link-topo i {
 footer nav {
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 1vw;
 }
 
 .footer_logo {
@@ -668,40 +726,51 @@ footer nav {
 }
 
 .footer-redes .icone-instagram {
-    background-image: linear-gradient(0.4turn, #405DE6, #5B51D8, #833AB4, #C13584, #FD1D1D, #F56040, #FCAF45);
+    background-color: #df0004;
     background-clip: text;
     color: transparent;
+    transition: 0.2s;
 }
 
 .footer-redes .icone-instagram:hover {
-    background-image: linear-gradient(to bottom, red, red);
+    background-color: white;
     background-clip: text;
+    transition: 0.2s;
 }
 
 .footer-redes .icone-whatsapp {
-    background-image: linear-gradient(to bottom, #5AD065, #25B43C);
+    background-color: #df0004;
     background-clip: text;
     color: transparent;
+    transition: 0.2s;
 }
 
 .footer-redes .icone-whatsapp:hover {
-    background-image: linear-gradient(to bottom, red, red);
+    background-color: white;
     background-clip: text;
+    transition: 0.2s;
 }
 
 .footer-redes .icone-gympass {
-    background-image: linear-gradient(to right, #F2486D, #c42044);
+    background-color: #df0004;
     background-clip: text;
     color: transparent;
+    transition: 0.2s;
 }
 
 .footer-redes .icone-gympass:hover {
-    background-image: linear-gradient(to bottom, red, red);
+    background-color: white;
     background-clip: text;
+    transition: 0.2s;
 }
 
 .footer-redes i {
-    font-size: 8vw;
+    font-size: 6vw;
+}
+
+footer h3 {
+    font-size: 3vw;
+    padding: 2vw 0vw;
 }
 
 footer hr {
