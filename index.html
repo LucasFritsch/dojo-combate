@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojo Combat</title>
     <meta name="description" content="Faça uma aula experimental de Jiu-jitsu, Muay thai ou Personal Fight na DC!">
-    <link rel="stylesheet" href="estilos/disp-móveis.css">
-    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
         <img class="logo" src="mídia/imagens/logo_sem-escrita.png" alt="">
-        <nav class="menu">
+        <ul class="menu-itens">
+            <li><a href="#sobre" target="_self" class="nav_item">SOBRE A DC</a></li>
+            <li>
+                <a href="#modalidades" target="_self"
+                class="nav_item">MODALIDADES</a>
+            </li>
+            <li><a href="#inscrição" class="nav_item">INSCRIÇÃO</a></li>
+        </ul>
+        <nav class="menu-hambúrguer">
             <div class="ícone_hambúrguer">
                 <input type="checkbox" class="menu_gatilho">
                 <span class="ícone_linha linha_01"></span>
                 <span class="ícone_linha  linha_02"></span>
                 <span class="ícone_linha  linha_03"></span>
 
-                <ul class="menu_itens">
+                <ul class="conteúdo">
                     <li><a href="#sobre" target="_self" class="nav_item">SOBRE A DC</a></li>
                     <li>
                         <a href="#modalidades" target="_self"
@@ -54,7 +62,7 @@
                 <div class="container_item">
                     <img class="item_ícone" src="mídia/ícones/icone_halteres.svg" alt="">
                     <h2>Espaço Equipado</h2>
-                    <p>Nossa academia oferece um espaço amplo e moderno, equipado com tudo o que é necessário para o treinamento de artes marciais. Do tatame à área de musculação, cada detalhe foi pensado..</p>
+                    <p>Nossa academia oferece um espaço amplo e moderno, equipado com tudo o que é necessário para o treinamento de artes marciais. Do tatame à área de musculação, cada detalhe foi pensado.</p>
                 </div>
                 <div class="container_item">
                     <img class="item_ícone". src="mídia/ícones/icone_calendário.svg" alt="">
@@ -76,6 +84,7 @@
                 </div>
                 <div class="conteúdo_imagens">
                     <img class="imagem_história01" src="mídia/imagens/história01.jpg" alt="">
+                    <img src="mídia/imagens/dojo-vazio.jpeg" alt="">
                 </div>
             </div>
             <a class="botão_contato-mobile" href="#" target="_blank">ENTRE EM CONTATO</a>
@@ -89,58 +98,66 @@
                 <h3>Escolha a melhor pra você!</h3>
             </div>
                 <div class="container-dt"> <!-- Essa div só aparece em telas maiores -->
-                    <div class="container-dt_item">
-                        <img class="imagem_item_jiujitsu imagem_item-dt" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
-                        <div class="conteúdo-dt">
-                            <h3>JIU JITSU</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit quibusdam explicabo ducimus iusto quae corrupti amet consequatur magni qui error fugiat rem cumque tempora nisi, quaerat at nulla porro.</p>
+                    <div class="item direita">
+                        <div class="item-título">
+                            <h3>Jiu Jitsu</h3>
+                        </div>
+                        <img class="imagem_item_jiujitsu" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <div class="conteúdo conteúdo-esquerda">
+                            <p>Jiu-Jitsu é uma arte marcial focada em técnicas de alavancas, estrangulamentos e imobilizações, que permitem a uma pessoa neutralizar um oponente, mesmo de maior força física. É amplamente praticado em contextos de defesa pessoal e competições esportivas.</p>
                         </div>
                     </div>
-                    <div class="container-dt_item">
-                        <img class="imagem_item_jiujitsu imagem_item-dt" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
-                        <div class="conteúdo-dt">
-                            <h3>JIU JITSU</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit quibusdam explicabo ducimus iusto quae corrupti amet consequatur magni qui error fugiat rem cumque tempora nisi, quaerat at nulla porro.</p>
+                    <div class="item esquerda">
+                        <div class="item-título">
+                            <h3>Jiu Jitsu Kids</h3>
+                        </div>
+                        <img class="imagem_item_jiujitsu img-direita" src="mídia/imagens/jiujitsu_infantil.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <div class="conteúdo conteúdo-direita">
+                            <p>Jiu-Jitsu infantil é uma modalidade adaptada para crianças, que ensina técnicas de defesa pessoal, autocontrole e disciplina. Além de desenvolver habilidades físicas como força e coordenação, promove valores como respeito, perseverança e trabalho em equipe.</p>
                         </div>
                     </div>
-                    <div class="container-dt_item">
-                        <img class="imagem_item_jiujitsu imagem_item-dt" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
-                        <div class="conteúdo-dt">
-                            <h3>JIU JITSU</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit quibusdam explicabo ducimus iusto quae corrupti amet consequatur magni qui error fugiat rem cumque tempora nisi, quaerat at nulla porro.</p>
+                    <div class="item direita">
+                        <div class="item-título">
+                            <h3>Muay Thai</h3>
+                        </div>
+                        <img class="imagem_item_jiujitsu img-esquerda" src="mídia/imagens/muaythai.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <div class="conteúdo conteúdo-esquerda">
+                            <p>Muay Thai é uma arte marcial tradicional da Tailândia, conhecida como "a arte das oito armas". Utiliza socos, chutes, cotoveladas e joelhadas, combinando força, técnica e resistência física.</p>
                         </div>
                     </div>
-                    <div class="container-dt_item">
-                        <img class="imagem_item_jiujitsu imagem_item-dt" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
-                        <div class="conteúdo-dt">
-                            <h3>JIU JITSU</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit quibusdam explicabo ducimus iusto quae corrupti amet consequatur magni qui error fugiat rem cumque tempora nisi, quaerat at nulla porro.</p>
+                    <div class="item esquerda">
+                        <div class="item-título">
+                            <h3>Personal Fight</h3>
+                        </div>
+                        <img class="imagem_item_jiujitsu img-direita" src="mídia/imagens/muaythai.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <div class="conteúdo conteúdo-direita">
+                            <p>Personal Fight é um programa de treinamento personalizado focado em técnicas de luta, defesa pessoal e condicionamento físico, ideal para quem busca melhorar habilidades de combate e aumentar a resistência física.</p>
                         </div>
                     </div>
                 </div>
-                <div class="container-mobile">
-                    <div class="item_container-mobile item_jiujitsu">
+                <div class="container-mb">
+                    <div class="item_container-mb item_jiujitsu">
                         <input type="checkbox" class="modalidades_gatilho">
                         <div class="conteúdo">
                             <h3>Jiu Jitsu</h3>
                             <p>Jiu-Jitsu é uma arte marcial focada em técnicas de alavancas, estrangulamentos e imobilizações, que permitem a uma pessoa neutralizar um oponente, mesmo de maior força física. É amplamente praticado em contextos de defesa pessoal e competições esportivas.</p>
                         </div>
                     </div>
-                    <div class="item_container-mobile item_jiujitsukids">
+                    <div class="item_container-mb item_jiujitsukids direita" >
                         <input type="checkbox" class="modalidades_gatilho">
                         <div class="conteúdo">
                             <h3>Jiu Jitsu Kids</h3>
                             <p>Jiu-Jitsu infantil é uma modalidade adaptada para crianças, que ensina técnicas de defesa pessoal, autocontrole e disciplina. Além de desenvolver habilidades físicas como força e coordenação, promove valores como respeito, perseverança e trabalho em equipe.</p>
                         </div>
                     </div>
-                    <div class="item_container-mobile item_muaythai">
+                    <div class="item_container-mb item_muaythai">
                         <input type="checkbox" class="modalidades_gatilho">
                         <div class="conteúdo">
                             <h3>Muay Thai</h3>
                             <p>Muay Thai é uma arte marcial tradicional da Tailândia, conhecida como "a arte das oito armas". Utiliza socos, chutes, cotoveladas e joelhadas, combinando força, técnica e resistência física.</p>
                         </div>
                     </div>
-                    <div class="item_container-mobile item_personalfight">
+                    <div class="item_container-mb item_personalfight direita">
                         <input type="checkbox" class="modalidades_gatilho">
                         <div class="conteúdo">
                             <h3>Personal Fight</h3>
@@ -154,12 +171,12 @@
 
         <section id="inscrição">
             <div class="header">
-                <h2>HORÁRIOS E INSCRIÇÃO</h2><h3>Inscreva-se!</h3>
+                <h2>Dias e horários</h2>
+                <h3>Inscreva-se!</h3>
             </div>
-            <div class="conteúdo">
-                <div class="aulas">
-                    <h3>Dias e Horários</h3>
-                    <div class="container_item">
+                <div class="conteúdo">
+                    <h3></h3>
+                    <div class="container_aulas">
                         <div class="aulas_item">
                             <h4>Segunda</h4>
                             <ul>
@@ -199,69 +216,71 @@
                     </div>
                 </div>
 
-
-                <form action="" method="" autocomplete="on">
-                    <div>
-                        <label for="nome">Nome Completo</label>
-                        <input id="nome" type="text" required autocomplete="name">
-                    </div>
-                    <div>
-                        <label for="nascimento">Data de Nascimento</label>
-                        <input id="nascimento" type="date" required autocomplete="bday">
-                    </div>
-                    <div>
-                        <label for="endereco">Endereço</label>
-                        <input id="endereco" type="text" required placeholder="Bairro, rua, número, apto..." autocomplete="address-level1">
-                    </div>
-                    <div>
-                        <label for="telefone">Telefone</label>
-                        <input id="telefone" type="tel" required autocomplete="tel">
-                    </div>
-                    <div>
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" type="text" required autocomplete="">
-                    </div>
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" required autocomplete="email">
-                    </div>
-                    <div>
-                        <label for="modalidade">Modalidade</label>
-                        <select name="modalidade" id="modalidade">
-                            <option value="">-Selecione-</option>
-                            <option value="jiu-jitsu">Jiu Jitsu</option>
-                            <option value="jiu-jitsu-kids">Jiu Jitsu Kids</option>
-                            <option value="muay-Thai">Muay Thai</option>
-                            <option value="personal-fight">Personal Fight</option>
-                        </select>
-                    </div>
-                    <div class="dias-pratica">
-                        <label for="dias-pratica">Dias de prática <strong>(Selecione até três)</strong></label><br>
-                        <div class="container-dias">
-                            <div>
-                                <input type="checkbox" name="dia" id="segunda" value="Segunda">
-                                <label for="segunda">Segunda</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="dia" id="terca" value="Terça">
-                                <label for="terca">Terça</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="dia" id="quarta" value="Quarta">
-                                <label for="quarta">Quarta</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="dia" id="quinta" value="Quinta">
-                                <label for="quinta">Quinta</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="dia" id="sexta" value="Sexta">
-                                <label for="sexta">Sexta</label>
+                <div class="formulário">
+                    <form action="" method="post" autocomplete="on">
+                        <div>
+                            <label for="nome">Nome Completo</label>
+                            <input id="nome" type="text" required autocomplete="name">
+                        </div>
+                        <div>
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input id="nascimento" type="date" required autocomplete="bday">
+                        </div>
+                        <div>
+                            <label for="endereco">Endereço</label>
+                            <input id="endereco" type="text" required placeholder="Bairro, rua, número, apto..." autocomplete="address-level1">
+                        </div>
+                        <div>
+                            <label for="telefone">Telefone</label>
+                            <input id="telefone" type="tel" required autocomplete="tel">
+                        </div>
+                        <div>
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="text" required autocomplete="">
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" required autocomplete="email">
+                        </div>
+                        <div>
+                            <label for="modalidade">Modalidade</label>
+                            <select name="modalidade" id="modalidade">
+                                <option value="">-Selecione-</option>
+                                <option value="jiu-jitsu">Jiu Jitsu</option>
+                                <option value="jiu-jitsu-kids">Jiu Jitsu Kids</option>
+                                <option value="muay-Thai">Muay Thai</option>
+                                <option value="personal-fight">Personal Fight</option>
+                            </select>
+                        </div>
+                        <div class="dias-pratica">
+                            <label for="dias-pratica">Dias de prática <strong>(Selecione até três)</strong></label><br>
+                            <div class="container-dias">
+                                <div>
+                                    <input type="checkbox" name="dia" id="segunda" value="Segunda">
+                                    <label for="segunda">Segunda</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dia" id="terca" value="Terça">
+                                    <label for="terca">Terça</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dia" id="quarta" value="Quarta">
+                                    <label for="quarta">Quarta</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dia" id="quinta" value="Quinta">
+                                    <label for="quinta">Quinta</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dia" id="sexta" value="Sexta">
+                                    <label for="sexta">Sexta</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <button onclick="mandarParaWhatsapp()">Enviar</button>
-                </form>
+                        <button onclick="mandarParaWhatsapp()">Enviar</button>
+                    </form>
+                    <img src="mídia/imagens/lutadora-02.png" alt="">
+                </div>
             </div>
         </section>
     </main>
@@ -288,9 +307,12 @@
         </div>
         <hr>
         <div class="linha">
-            <h3>Desenvolvido por Lucas Fritsch⭐</h3>
+            <h3 class="créditos">Desenvolvido por Lucas Fritsch⭐</h3>
         </div>
 
+    <script src="whatsapp.js"></script>
+</body>
+</html>
     <script src="whatsapp.js"></script>
 </body>
 </html>
