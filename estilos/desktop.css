@@ -1,0 +1,613 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+:root {
+    --vermelho_claro: #ff0000;
+    --vermelho_médio: #8D0000;
+    --vermelho_escuro: #4D0000;
+    --preto: #080808;
+    --cinza_fundo: #161616;
+    --cinza_footer: #444444;
+    --branco: #f0f0f0;
+
+    --kanjis: 'Reggae One';
+    --Poppins: 'Poppins';
+    --Kanit: 'Kanit';
+    --Oswald: 'Oswald'
+}
+
+@media screen and (min-width: 1100px) {
+
+    /* !Configurações de posicionamento, tamanhos e paddings das caixas maiores e de divisórias: header, section, footer e hr (footer não recebe max-width pois seu fundo deve ter o tamanho da página inteira) */ 
+
+    html {
+        width: 100vw;
+    }
+
+    section {
+        max-width: 1000px;
+        padding: 0px;
+    }
+
+    section .header {
+        flex-direction: row;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    section .header h2 {
+        font-family: var(--Oswald);
+        font-size: 3em;
+    }
+
+    section .header h3 {
+        font-family: var(--Poppins);
+        font-size: 1.5em;
+    }
+
+    /* !Configuirações dos demais elementos */
+    /* relativas à header */
+    header {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        
+        max-width: 1000px;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+
+        margin: 20px auto 0;
+        padding: 10px 0;
+    }
+
+    header::before {
+        content: "";
+        width: 120vw;
+        height: 100%;
+        background-color: #000000a8;
+        backdrop-filter: blur(10px);
+        position: absolute;
+        z-index: 30;
+        left: -180px;
+    }
+
+    header .logo {
+        max-width: 60px;
+        z-index: 40;
+    }
+
+    header .menu-itens {
+        display: block;
+        position: sticky;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+ 
+        height: 60px;
+        width: 530px;
+        z-index: 40;
+    }
+
+    .menu-itens a {
+        font-size: 1.5em;
+        font-family: "Oswald";
+    }
+
+    header .menu-hambúrguer {
+        display: none;
+
+    }
+
+    .menu-itens li {
+        position: relative;
+    }
+
+    .menu-itens li::after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        left: 0;
+        z-index: 30;
+
+        background-color: #990000;
+        border-radius: 2px;
+
+        height: 2px;
+        width: 0;
+
+        transition: 0.3s ease-in-out;
+    }
+
+    .menu-itens li:hover::after {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Relativas ao hero */
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px;
+        border-bottom: solid 1px red;
+    }
+
+    
+    .hero img {
+        max-width: 350px;
+    }
+
+    .hero .textos {
+        background-image: none;
+        border: none;
+        width: fit-content;
+        padding: 0;
+    }
+
+    .hero .nome-academia {
+        gap: 0.6vw;
+
+        font-size: 3.5em;
+        line-height: 1em;
+    }
+
+    .hero .textos h2 {
+        font-size: 2em;
+    }
+
+    .hero .kanji {
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .kanji span 
+    {
+        font-size: 3em;
+    }
+
+    /* Relativas à section "sobre" */
+
+    #sobre .container {
+        flex-direction: row;
+    }
+
+    #sobre .container_item {
+        background-color: #0a0a0a52;
+        backdrop-filter: blur(10px);
+
+        border: solid 1px #c7c7c7;
+        border-radius: 10px;
+
+        max-width: 32%;
+        padding: 1% 2%;
+
+        align-items: start;
+        gap: 0;
+        transition: 0.5s;
+    }
+
+    #sobre .container_item:hover {
+        scale: 1.09;
+        transition: 0.5s;
+        cursor: pointer;
+    }   
+
+    .item_ícone {
+        width: 20%;
+        padding-bottom: 2%;
+    }
+
+    #sobre .container_item h2 {
+        font-family: var(--Poppins);
+        font-size: 1.1em;
+    }
+
+    #sobre .container_item p {
+        font-family: var(--Poppins);
+        font-size: 1em;
+        font-weight: 300;
+        text-align: justify;
+        line-height: normal;
+    }
+
+    /* Relativas à section "história" */
+    #história .header {
+        font-size: 3em;
+    }
+
+    #história .conteúdo {
+        flex-direction: row;
+        margin-bottom: 150px;
+        height: fit-content;
+    }
+
+    #história .conteúdo_textos {
+        position: relative;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #história .conteúdo_textos h4 {
+        font-size: 2em;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #história .conteúdo_textos p {
+        font-size: 1.2em;
+        text-align: justify;
+        padding-bottom: 0;
+        margin-bottom: 40px;
+    }
+
+    #história .conteúdo_imagens {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 90%;
+        justify-content: space-between;
+    }
+
+    #história .conteúdo_imagens::after {
+        top: -2%;
+        right: -5%;
+
+        width: 100%;
+        height: 104%;
+        z-index: -1;
+    }
+
+    .botão_contato-desktops {
+        background-image: linear-gradient(to right, rgb(167, 0, 0), red);
+        border-radius: 20px;
+        display: block;
+
+        font-family: var(--Kanit);
+        font-size: 1vw;
+
+        margin: 2% auto;
+        padding: 2% 4%;
+        width: fit-content;
+        
+        transition: 0.2s;
+        position: static;
+    }
+
+    #história .botão_contato-desktops:hover {
+        box-shadow: 0px 0px 1px 1px white;
+        transition: 0.2s;
+    }
+
+    .botão_contato-mobile {
+        display: none;
+    }
+
+    /* Relativas à section "modalidades" */
+    #modalidades .container-mb {
+        display: none;
+    }
+
+    #modalidades .container-dt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 40px;
+
+        height: fit-content;
+        width: 90%;
+        margin: auto;
+
+        position: relative;
+    }
+
+    .container-dt .item {
+        /*border-right: solid 2px var(--vermelho_escuro);
+        border-bottom: solid 2px var(--vermelho_escuro);
+        border-top: solid 4px #ff5757;
+        border-left: solid 4px #ff5757; */
+        box-shadow: -5px -5px 1px rgba(116, 0, 0, 0.596);
+
+        border-radius: 20px;
+        background-image: linear-gradient(105deg, var(--vermelho_médio), var(--vermelho_escuro)) ;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        transition: 0.3s;
+
+        position: relative;
+        overflow: hidden;
+
+        cursor: pointer;
+    }
+
+    .container-dt .item:hover {
+        scale: 1.1;
+        transition: 0.3s;
+        box-shadow: none;
+    }
+
+    .container-dt .esquerda {
+       flex-direction: row-reverse;
+    }
+
+    .container-dt img {
+        object-fit: cover;
+        width: 50%;
+        height: 250px;
+    }
+
+    .container-dt .item-título {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    .container-dt h3 {
+        font-size: 2.5em;
+        font-family: var(--Oswald);
+        text-align: center;
+        color: var(--branco);
+    }
+
+    .conteúdo p {
+        text-align: justify;
+        font-size: 1.2em;
+        font-family: var(--Poppins);
+        line-height: 25px;
+    }
+
+    .container-dt .conteúdo {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        position: absolute;
+        top: 100%;
+
+        width: 50%;
+        height: 100%;
+        padding: 0 6%;
+
+        transition: 0.3s;
+    }
+
+    .container-dt .conteúdo-direita {
+        right: 0;
+    }
+
+    .container-dt .conteúdo-esquerda {
+        left: 0;
+    }
+
+    .container-dt .item:hover .conteúdo {
+        top: 0;
+        background-color: #000000;
+        transition: 0.5s;
+    }
+
+    /* Relativas à section "inscrição" */
+    #inscrição .conteúdo {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        height: fit-content;
+        gap: 50px;
+    }
+
+    #inscrição .conteúdo {
+        max-width: 100%;
+        row-gap: 40;
+        height: fit-content;
+        padding: 0px 20px 40px;
+    }
+
+    .conteúdo h3 {
+        font-size: 1.5em;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #inscrição .container_aulas {
+        display: flex;
+        width: 100%; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    #inscrição .aulas_item {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aulas_item h4 {
+        font-size: 1.5em;
+    }
+
+    .aulas_item li {
+        font-size: 1.2em;
+    }
+
+    .formulário {
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to bottom, var(--vermelho_médio), var(--vermelho_claro));
+
+        border-right: solid 2px var(--vermelho_claro);
+        border-left: solid 2px var(--vermelho_claro);
+        border-bottom: solid 2px var(--vermelho_claro);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    
+        padding-top: 2vw;
+        padding-bottom: 4vw;
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        width: 55%;
+        row-gap: 10px;
+    }
+
+    form div {
+        width: 80%;
+    }
+
+    form label {
+        font-size: 1.5em;
+    }
+
+    form input {
+        font-size: 1em;
+        color: #000000;
+    }
+
+    input select {
+        font-size: 1em;
+    }
+
+    form option {
+        color: var(--preto);
+        font-size: 0.5em;
+    }
+
+    form label, form input {
+        display: block;
+        font-family: var(--Poppins);
+    }
+
+    .dias-pratica {
+        align-items: center;
+    }
+
+    .dias-pratica .container-dias {
+        padding-top: 20px;
+    }
+
+    .container-dias label {
+        font-size: 1.2em;
+    }
+
+    .container-dias input {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-dias input:checked::after {
+        font-size: 2.5em;
+    }
+
+    form button {
+        font-size: 2em;
+        margin-top: 40px;
+    }
+
+    .formulário img {
+        max-width: 40%;
+        object-fit: contain;
+    }
+
+    /* Configurações relativas ao footer */
+    footer {
+        padding: 0;
+        background-color: var(--cinza_fundo);
+        width: 100vw;
+    }
+
+    footer a, footer span {
+        font-family: var(--Kanit);
+    }
+
+    footer .linha {
+        align-items: center;
+        display: flex;
+        width: 75vw;
+        justify-content: space-between;
+        margin: auto;
+        font-family: var(--Kanit);
+    }
+
+    footer .link-topo {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        font-size: 1em;
+    }
+
+    footer .link-topo i {
+        font-size: 1.5em;
+    }
+
+    footer nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    footer nav a {
+        font-size: 1.2em;
+    }
+
+    .footer_logo {
+        width: 15vw;
+    }
+
+    .footer-redes {
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+
+        font-size: 1em;
+    }
+
+    .footer-redes span {
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+
+        font-size: 1.5em;
+    }
+
+    .footer-redes i {
+        font-size: 2vw;
+    }
+
+    footer hr {
+        border: solid 1px rgb(134, 134, 134);
+        margin: 10px auto;
+        width: 75vw;
+    }
+
+    footer .créditos {
+        text-align: center;
+        font-family: var(--Poppins);
+        margin: auto;
+        margin-bottom: 25px;
+        font-weight: 400;
+    }
+}
+    
+
+
+
+
+
