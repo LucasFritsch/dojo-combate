@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.google q 23 2~ytrfeswaz\apis.com/css2?family=Reggae+One&display=swap');
 
 
 
@@ -307,94 +307,43 @@ header .menu_gatilho:checked ~ .linha_03 {
 /* Configurações relativas à section "história" */
 
 #história .header {
-    font-family: var(--Oswald);
-    font-size: 8vw;
-    font-weight: 600;
-    text-align: center;
+    font-size: 2rem;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+#história .conteúdo h4 {
+    text-align: left;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
 #história .conteúdo {
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px 20px 0px;
+    border-left: solid 3px var(--vermelho_médio);
+    border-radius: 10px;
+}
+
+#história article {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
 }
 
-#história .conteúdo_textos {
-    width: 80%;
+#história p {
+    font-size: 1rem;
 }
 
-#história .conteúdo_textos h4 {
-    font-size: 6vw;
-    font-weight: 600;
-    margin-top: 4vw;
-    padding-bottom: 2vw;
-
-    border-left: solid 3px rgb(172, 0, 0);
-    padding-left: 12px;
-    margin-left: -12px;
-    border-top-left-radius: 8px;
-}
-
-#história .conteúdo_textos p {
-    font-family: var(--Poppins);
-    font-size: 4vw;
-
-    text-align: justify;
-
-    padding-bottom: 4vw;
-
-    border-left: solid 3px rgb(172, 0, 0);
-    padding-left: 12px;
-    margin-left: -12px;
-    border-bottom-left-radius: 8px;
-}
-
-#história .conteúdo_imagens {
-    display: flex;
-    width: 90%;
-    position: relative;
-    margin-top: 8vw;
-}
-
-#história .conteúdo_imagens::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -5%;
-    right: -2%;
-
-    background-color: var(--vermelho_médio);
-    backdrop-filter: blur(10%);
-    border-radius: 5px;
-
+.conteúdo img {
     width: 100%;
-    height: 100%;
-}
-
-#história .conteúdo_imagens img{
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-}
-
-.botão_contato-desktops {
-    display: none;
-}
-
-.botão_contato-mobile {
-    background-image: linear-gradient(to right, rgb(167, 0, 0), red);
-        border-radius: 5px;
-        display: block;
-
-        font-family: var(--Kanit);
-        font-size: 5vw;
-
-        margin: 2% auto;
-        padding: 2% 4%;
-        width: fit-content;
-        
-        transition: 0.2s;
+    border-right: solid 3px var(--vermelho_médio);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    object-fit: cover;
+    margin: 20px 0;
 }
 
 /* Configurações relativas à section modalidades (o conteúdo para desktops recebe "display: none", e uma div que se comporta como um slider toma lugar */
@@ -418,7 +367,6 @@ header .menu_gatilho:checked ~ .linha_03 {
 
 #modalidades .item_container-mb {
     background-size: cover;
-    background-position: center 30%;
 
     border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
@@ -430,18 +378,33 @@ header .menu_gatilho:checked ~ .linha_03 {
 
 
 #modalidades .item_jiujitsu {
-    background-image: url("../mídia/imagens/jiujitsu.png");
+    background-image: url("../mídia/imagens/jiujitsu_adultos.png");
+    background-position: 83% 35%;
+    background-size: 75%;
+    background-repeat: no-repeat;
 }
 
 #modalidades .item_jiujitsukids {
     background-image: url("../mídia/imagens/jiujitsu_infantil.png");
-    background-position: center 25%;
+    background-position: 96% 7%;
+    background-size: 58%;
+    background-repeat: no-repeat;
 }
 
 #modalidades .item_muaythai {
     background-image: url("../mídia/imagens/muaythai.png");
-    background-position: center 30%;
+    background-position: 90% 7%;
+    background-size: 56%;
+    background-repeat: no-repeat;
 }
+
+#modalidades .item_personalfight {
+    background-image: url("../mídia/imagens/personal-fight.png");
+    background-position: 133% 7%;
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+
 
 .item_container-mb .conteúdo {
     display: flex;
@@ -485,27 +448,34 @@ header .menu_gatilho:checked ~ .linha_03 {
 #inscrição .conteúdo {
     border-left: solid 2px var(--vermelho_claro);
     border-right: solid 2px var(--vermelho_claro);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom: solid 2px var(--vermelho_claro);
+    border-radius: 10px;
     padding-top: 4vw;
     padding-bottom: 8vw;
     display: flex;
     flex-direction: column;
     gap: 4vw;
     max-width: 95%;
+    margin: auto;
 
     background-image: linear-gradient(to bottom, black, var(--vermelho_médio));
 }
 
 #inscrição .container_aulas{
+    margin: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-content: center;
-    justify-content: space-between;
-
+    column-gap: 4%;
+    row-gap: 20px;
     margin-bottom: 2vw;
-    width: 100%;
+    width: 86%;
+}
+
+.container_aulas .aulas_item {
+    width: 45%;
 }
 
 .container_aulas h3 {
@@ -537,8 +507,6 @@ form {
     align-items: center;
     justify-content: space-between;
     row-gap: 1vw;
-
-
 }
 
 form > div {
@@ -546,6 +514,18 @@ form > div {
     flex-direction: row;
     justify-content: space-between;
     width: 95%;
+}
+
+form input {
+    color: #000000;
+}
+
+form option {
+    color: #000000;
+    cursor: pointer;
+}
+form select {
+    cursor: pointer;
 }
 
 form .dias-pratica {
@@ -574,6 +554,7 @@ form .dias-pratica {
     border-radius: 5px;
     border: solid 1px rgb(117, 0, 0);
     position: relative;
+    cursor: pointer;
 }
 
 .container-dias input:checked {
@@ -612,6 +593,7 @@ form input, select {
 
 form select {
     font-size: 4vw;
+    color: #000000;
 }
 
 form button {
@@ -630,6 +612,11 @@ form button:hover {
     background-color: #ffffff;
     color: #b60000;
     transition: 0.2s;
+    cursor: pointer;
+}
+
+.formulário img {
+    display: none;
 }
 
 /* Configurações relativas ao footer */
