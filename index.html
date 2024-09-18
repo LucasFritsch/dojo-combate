@@ -74,20 +74,19 @@
         <section id="história">
             <h3 class="header">NOSSA HISTÓRIA</h3>
             <div class="conteúdo">
-                <div class="conteúdo_textos">
-                    <h4>O começo</h4>
+                <h4>O começo</h4>
+                <article>
                     <p>Dojo Combat foi inaugurada em 2017 na Avenida Mato Grosso pelo Sensei Ricardo Takeda, com a missão de ser um centro de excelência em artes marciais. Desde sua inauguração, o dojo se destacou por combinar tradições antigas com técnicas modernas, criando um ambiente de aprendizado dinâmico e acolhedor. Sob a liderança do Sensei Takeda, um mestre com décadas de experiência, a academia rapidamente se tornou referência na cidade, oferecendo treinos de Jiu-Jitsu e Personal Fight. A Dojo Combat é reconhecido não apenas pelo rigor técnico, mas também pelo seu compromisso com a formação de caráter, promovendo disciplina, respeito e autoconfiança em seus alunos.</p>
-                    <h4>Reopening</h4>
+                    <img class="imagem_história01" src="mídia/imagens/história01.jpg" alt="">
+                </article>
+
+                <h4>Reabertura</h4>
+                <article>
                     <p>Em 2024, o Dojo Combat passou por uma importante fase de expansão, reinaugurando em um espaço mais amplo na Avenida Rio Grande do Sul. A nova instalação foi projetada para atender ao crescente número de alunos e oferecer um ambiente ainda mais completo para o treinamento. Com essa mudança, a academia ampliou seu leque de modalidades, introduzindo o Muay Thai como uma das principais ofertas, além das já consagradas aulas de Jiu-Jitsu. Sob a liderança contínua do Sensei Ricardo Takeda, o Dojo Combat reforçou seu compromisso com a excelência nas artes marciais, oferecendo instalações modernas e uma equipe de instrutores qualificados, prontos para levar os alunos a novos patamares em suas jornadas de aprendizado e desenvolvimento pessoal.
                     </p>
-                    <a class="botão_contato-desktops" href="#" target="_blank">ENTRE EM CONTATO</a>
-                </div>
-                <div class="conteúdo_imagens">
-                    <img class="imagem_história01" src="mídia/imagens/história01.jpg" alt="">
                     <img src="mídia/imagens/dojo-vazio.jpeg" alt="">
-                </div>
+                </article>
             </div>
-            <a class="botão_contato-mobile" href="#" target="_blank">ENTRE EM CONTATO</a>
         </section>
 
         <hr class="divisora-sections">
@@ -102,7 +101,7 @@
                         <div class="item-título">
                             <h3>Jiu Jitsu</h3>
                         </div>
-                        <img class="imagem_item_jiujitsu" src="mídia/imagens/jiujitsu.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <img class="imagem_item_jiujitsu" src="mídia/imagens/jiujitsu_adultos.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
                         <div class="conteúdo conteúdo-esquerda">
                             <p>Jiu-Jitsu é uma arte marcial focada em técnicas de alavancas, estrangulamentos e imobilizações, que permitem a uma pessoa neutralizar um oponente, mesmo de maior força física. É amplamente praticado em contextos de defesa pessoal e competições esportivas.</p>
                         </div>
@@ -129,7 +128,7 @@
                         <div class="item-título">
                             <h3>Personal Fight</h3>
                         </div>
-                        <img class="imagem_item_jiujitsu img-direita" src="mídia/imagens/muaythai.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
+                        <img class="imagem_item_jiujitsu img-direita" src="mídia/imagens/personal-fight.png" alt="Dois homens usando kimonos em uma luta de jiu jitsu.">
                         <div class="conteúdo conteúdo-direita">
                             <p>Personal Fight é um programa de treinamento personalizado focado em técnicas de luta, defesa pessoal e condicionamento físico, ideal para quem busca melhorar habilidades de combate e aumentar a resistência física.</p>
                         </div>
@@ -214,74 +213,73 @@
                             </ul>
                         </div>
                     </div>
-                </div>
 
-                <div class="formulário">
-                    <form action="" method="post" autocomplete="on">
-                        <div>
-                            <label for="nome">Nome Completo</label>
-                            <input id="nome" type="text" required autocomplete="name">
-                        </div>
-                        <div>
-                            <label for="nascimento">Data de Nascimento</label>
-                            <input id="nascimento" type="date" required autocomplete="bday">
-                        </div>
-                        <div>
-                            <label for="endereco">Endereço</label>
-                            <input id="endereco" type="text" required placeholder="Bairro, rua, número, apto..." autocomplete="address-level1">
-                        </div>
-                        <div>
-                            <label for="telefone">Telefone</label>
-                            <input id="telefone" type="tel" required autocomplete="tel">
-                        </div>
-                        <div>
-                            <label for="cpf">CPF</label>
-                            <input id="cpf" type="text" required autocomplete="">
-                        </div>
-                        <div>
-                            <label for="email">E-mail</label>
-                            <input id="email" type="email" required autocomplete="email">
-                        </div>
-                        <div>
-                            <label for="modalidade">Modalidade</label>
-                            <select name="modalidade" id="modalidade">
-                                <option value="">-Selecione-</option>
-                                <option value="jiu-jitsu">Jiu Jitsu</option>
-                                <option value="jiu-jitsu-kids">Jiu Jitsu Kids</option>
-                                <option value="muay-Thai">Muay Thai</option>
-                                <option value="personal-fight">Personal Fight</option>
-                            </select>
-                        </div>
-                        <div class="dias-pratica">
-                            <label for="dias-pratica">Dias de prática <strong>(Selecione até três)</strong></label><br>
-                            <div class="container-dias">
-                                <div>
-                                    <input type="checkbox" name="dia" id="segunda" value="Segunda">
-                                    <label for="segunda">Segunda</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="dia" id="terca" value="Terça">
-                                    <label for="terca">Terça</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="dia" id="quarta" value="Quarta">
-                                    <label for="quarta">Quarta</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="dia" id="quinta" value="Quinta">
-                                    <label for="quinta">Quinta</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="dia" id="sexta" value="Sexta">
-                                    <label for="sexta">Sexta</label>
+                    <div class="formulário">
+                        <form action="" method="post" autocomplete="on">
+                            <div>
+                                <label for="nome">Nome Completo</label>
+                                <input id="nome" type="text" required autocomplete="name">
+                            </div>
+                            <div>
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input id="nascimento" type="date" required autocomplete="bday">
+                            </div>
+                            <div>
+                                <label for="endereco">Endereço</label>
+                                <input id="endereco" type="text" required placeholder="Bairro, rua, número, apto..." autocomplete="address-level1">
+                            </div>
+                            <div>
+                                <label for="telefone">Telefone</label>
+                                <input id="telefone" type="tel" required autocomplete="tel">
+                            </div>
+                            <div>
+                                <label for="cpf">CPF</label>
+                                <input id="cpf" type="text" required autocomplete="">
+                            </div>
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" required autocomplete="email">
+                            </div>
+                            <div>
+                                <label for="modalidade">Modalidade</label>
+                                <select name="modalidade" id="modalidade">
+                                    <option value="">-Selecione-</option>
+                                    <option value="jiu-jitsu">Jiu Jitsu</option>
+                                    <option value="jiu-jitsu-kids">Jiu Jitsu Kids</option>
+                                    <option value="muay-Thai">Muay Thai</option>
+                                    <option value="personal-fight">Personal Fight</option>
+                                </select>
+                            </div>
+                            <div class="dias-pratica">
+                                <label for="dias-pratica">Dias de prática <strong>(Selecione até três)</strong></label>
+                                <div class="container-dias">
+                                    <div>
+                                        <input type="checkbox" name="dia" id="segunda" value="Segunda">
+                                        <label for="segunda">Segunda</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="dia" id="terca" value="Terça">
+                                        <label for="terca">Terça</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="dia" id="quarta" value="Quarta">
+                                        <label for="quarta">Quarta</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="dia" id="quinta" value="Quinta">
+                                        <label for="quinta">Quinta</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="dia" id="sexta" value="Sexta">
+                                        <label for="sexta">Sexta</label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button onclick="mandarParaWhatsapp()">Enviar</button>
-                    </form>
-                    <img src="mídia/imagens/lutadora-02.png" alt="">
+                            <button onclick="mandarParaWhatsapp()">Enviar</button>
+                        </form>
+                        <img src="mídia/imagens/lutadora-02.png" alt="">
+                    </div>
                 </div>
-            </div>
         </section>
     </main>
     <footer>
@@ -310,9 +308,6 @@
             <h3 class="créditos">Desenvolvido por Lucas Fritsch⭐</h3>
         </div>
 
-    <script src="whatsapp.js"></script>
-</body>
-</html>
     <script src="whatsapp.js"></script>
 </body>
 </html>
