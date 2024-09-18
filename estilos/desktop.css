@@ -41,12 +41,12 @@
 
     section .header h2 {
         font-family: var(--Oswald);
-        font-size: 3em;
+        font-size: 2.5rem;
     }
 
     section .header h3 {
         font-family: var(--Poppins);
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     /* !Configuirações dos demais elementos */
@@ -64,9 +64,10 @@
         padding: 10px 0;
     }
 
+    
     header::before {
         content: "";
-        width: 120vw;
+        width: 100vw;
         height: 100%;
         background-color: #000000a8;
         backdrop-filter: blur(10px);
@@ -95,13 +96,12 @@
     }
 
     .menu-itens a {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-family: "Oswald";
     }
 
     header .menu-hambúrguer {
         display: none;
-
     }
 
     .menu-itens li {
@@ -152,12 +152,12 @@
     .hero .nome-academia {
         gap: 0.6vw;
 
-        font-size: 3.5em;
-        line-height: 1em;
+        font-size: 3.5rem;
+        line-height: 2rem;
     }
 
     .hero .textos h2 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .hero .kanji {
@@ -168,7 +168,7 @@
 
     .hero .kanji span 
     {
-        font-size: 3em;
+        font-size: 6rem;
     }
 
     /* Relativas à section "sobre" */
@@ -205,12 +205,12 @@
 
     #sobre .container_item h2 {
         font-family: var(--Poppins);
-        font-size: 1.1em;
+        font-size: 1.1rem;
     }
 
     #sobre .container_item p {
         font-family: var(--Poppins);
-        font-size: 1em;
+        font-size: 1rem;
         font-weight: 300;
         text-align: justify;
         line-height: normal;
@@ -218,78 +218,47 @@
 
     /* Relativas à section "história" */
     #história .header {
-        font-size: 3em;
+        font-size: 3rem;
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+
+    #história .conteúdo h4 {
+        text-align: left;
+        width: 100%;
+        font-size: 2em;
     }
 
     #história .conteúdo {
-        flex-direction: row;
+        flex-direction: column;
         margin-bottom: 150px;
-        height: fit-content;
+        padding: 10px 20px 20px;
+        margin: 40px 0;
+        border-left: solid 3px var(--vermelho_médio);
+        border-radius: 10px;
     }
 
-    #história .conteúdo_textos {
-        position: relative;
-        width: 45%;
+    #história article {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 30px;
     }
 
-    #história .conteúdo_textos h4 {
-        font-size: 2em;
-        padding-bottom: 20px;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    #história .conteúdo_textos p {
-        font-size: 1.2em;
-        text-align: justify;
-        padding-bottom: 0;
-        margin-bottom: 40px;
-    }
-
-    #história .conteúdo_imagens {
-        display: flex;
-        flex-direction: column;
+    #história p {
         width: 50%;
-        height: 90%;
-        justify-content: space-between;
+        font-size: 1rem;
     }
 
-    #história .conteúdo_imagens::after {
-        top: -2%;
-        right: -5%;
-
-        width: 100%;
-        height: 104%;
-        z-index: -1;
+    .conteúdo img {
+        height: 250px;
+        border-right: solid 3px var(--vermelho_médio);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        object-fit: cover;
+        width: auto;
+        margin: 0;
     }
-
-    .botão_contato-desktops {
-        background-image: linear-gradient(to right, rgb(167, 0, 0), red);
-        border-radius: 20px;
-        display: block;
-
-        font-family: var(--Kanit);
-        font-size: 1vw;
-
-        margin: 2% auto;
-        padding: 2% 4%;
-        width: fit-content;
-        
-        transition: 0.2s;
-        position: static;
-    }
-
-    #história .botão_contato-desktops:hover {
-        box-shadow: 0px 0px 1px 1px white;
-        transition: 0.2s;
-    }
-
-    .botão_contato-mobile {
-        display: none;
-    }
-
     /* Relativas à section "modalidades" */
     #modalidades .container-mb {
         display: none;
@@ -301,23 +270,17 @@
         justify-content: space-between;
         row-gap: 40px;
 
-        height: fit-content;
-        width: 90%;
+        height: 1000px;
+        width: 80%;
         margin: auto;
 
         position: relative;
     }
 
     .container-dt .item {
-        /*border-right: solid 2px var(--vermelho_escuro);
-        border-bottom: solid 2px var(--vermelho_escuro);
-        border-top: solid 4px #ff5757;
-        border-left: solid 4px #ff5757; */
-        box-shadow: -5px -5px 1px rgba(116, 0, 0, 0.596);
-
-        border-radius: 20px;
-        background-image: linear-gradient(105deg, var(--vermelho_médio), var(--vermelho_escuro)) ;
-        width: 100%;
+        border-right: solid 4px var(--vermelho_médio);
+        border-left: solid 4px var(--vermelho_médio);
+        border-radius: 10px;
 
         display: flex;
         justify-content: space-between;
@@ -341,9 +304,9 @@
     }
 
     .container-dt img {
-        object-fit: cover;
+        object-fit: contain;
         width: 50%;
-        height: 250px;
+        height: 120%;
     }
 
     .container-dt .item-título {
@@ -359,7 +322,7 @@
         color: var(--branco);
     }
 
-    .conteúdo p {
+    #modalidades  .conteúdo p {
         text-align: justify;
         font-size: 1.2em;
         font-family: var(--Poppins);
@@ -375,7 +338,7 @@
 
         width: 50%;
         height: 100%;
-        padding: 0 6%;
+        padding: 0 2%;
 
         transition: 0.3s;
     }
@@ -395,20 +358,37 @@
     }
 
     /* Relativas à section "inscrição" */
-    #inscrição .conteúdo {
-        display: flex;
-        align-items: center;
+    #inscrição {
+        background-image: url(../mídia/imagens/fundo_jiu-jitsu.png);
+        background-repeat: no-repeat;
+        background-position: 0% 44%;
+        background-size: 100%;
+        max-width: 90vw;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+    }
 
-        width: 100%;
-        height: fit-content;
-        gap: 50px;
+    #inscrição .header {
+        padding-bottom: 20px;
     }
 
     #inscrição .conteúdo {
-        max-width: 100%;
-        row-gap: 40;
-        height: fit-content;
-        padding: 0px 20px 40px;
+        margin-top: 0;
+        padding-top: 0;
+        background-image: none;
+        background-color: #140000ea;
+        backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        column-gap: 40px;
+        padding: 20px 30px;
+        border-right: solid 4px var(--vermelho_médio);
+        border-left: solid 4px var(--vermelho_médio);
+        border-bottom: none;
+        border-radius: 10px;
+        max-width: 1000px;
+
     }
 
     .conteúdo h3 {
@@ -419,18 +399,24 @@
 
     #inscrição .container_aulas {
         display: flex;
-        width: 100%; 
+        flex-direction: column;
         flex-direction: row;
-        flex-wrap: wrap;
-        row-gap: 40px;
-        justify-content: center;
-        align-items: baseline;
+        justify-content: flex-start;
+
+        row-gap: 10px;
+        height: fit-content;
+        padding: 10px 20px;
+        border-left: solid 4px var(--vermelho_claro);
+        border-right: solid 4px var(--vermelho_claro);
+        border-radius: 10px;
+        margin: 0;
     }
 
     #inscrição .aulas_item {
-        width: 32%;
         display: flex;
         flex-direction: column;
+        width: 240px;
+        margin: auto;
     }
 
     .aulas_item h4 {
@@ -444,17 +430,12 @@
     .formulário {
         display: flex;
         align-items: center;
-        background-image: linear-gradient(to bottom, var(--vermelho_médio), var(--vermelho_claro));
-
-        border-right: solid 2px var(--vermelho_claro);
-        border-left: solid 2px var(--vermelho_claro);
-        border-bottom: solid 2px var(--vermelho_claro);
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
     
-        padding-top: 2vw;
-        padding-bottom: 4vw;
-        width: 100%;
+        margin-top: 2vw;
+        padding: 0px 0;
+        margin-top: 0;
+
+        border-radius: 10px;
     }
 
     form {
@@ -462,15 +443,17 @@
         flex-direction: column;
         align-items: center;
 
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        width: 55%;
-        row-gap: 10px;
+        border-radius: 10px;
+        background-image: none;
+ 
+        width: 100%;
+        row-gap: 1px;
     }
 
     form div {
-        width: 80%;
+        width: 100%;
+        padding: 4px 8px;
+        border-radius: 4px;
     }
 
     form label {
@@ -480,10 +463,12 @@
     form input {
         font-size: 1em;
         color: #000000;
+        width: 40%;
+        border: none;
     }
 
-    input select {
-        font-size: 1em;
+    form select {
+        font-size: 1rem;
     }
 
     form option {
@@ -502,6 +487,7 @@
 
     .dias-pratica .container-dias {
         padding-top: 20px;
+        width: 100%;
     }
 
     .container-dias label {
@@ -523,8 +509,10 @@
     }
 
     .formulário img {
-        max-width: 40%;
-        object-fit: contain;
+        height: 100%;
+        width: 40%;
+        object-fit: cover;
+        border: none;
     }
 
     /* Configurações relativas ao footer */
@@ -601,13 +589,8 @@
         text-align: center;
         font-family: var(--Poppins);
         margin: auto;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         font-weight: 400;
+        font-size: 1rem;
     }
 }
-    
-
-
-
-
-
